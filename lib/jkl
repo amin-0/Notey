@@ -1,0 +1,63 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+
+class AddNote extends StatelessWidget {
+  final TextEditingController title = TextEditingController();
+  final TextEditingController content = TextEditingController();
+  final CollectionReference ref =
+      FirebaseFirestore.instance.collection('notes');
+
+  AddNote({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Add Note'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              ref.add({
+                'Title': title.text,
+                'Content': content.text,
+              }).whenComplete(() => Navigator.pop(context));
+            },
+            child: const Text(
+              'Save',
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
+          ),
+        ],
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(border: Border.all()),
+              child: TextField(
+                controller: title,
+                decoration: const InputDecoration(hintText: 'Title'),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(border: Border.all()),
+                child: TextField(
+                  controller: content,
+                  maxLines: null,
+                  expands: true,
+                  decoration: const InputDecoration(hintText: 'Content'),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

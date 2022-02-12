@@ -1,0 +1,10 @@
+gridView.builder()
+SliverGridDelegateWithFixedCrossAxisCount
+
+concepts learnt
+firebase cloud
+gridView and staggered grid gridView
+changing flutter logo and app name
+GestureDetector
+StreamBuilder
+callback function

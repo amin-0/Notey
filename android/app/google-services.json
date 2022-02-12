@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "163476968718",
+    "project_id": "notey-22fa0",
+    "storage_bucket": "notey-22fa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163476968718:android:d9f79feb9ae50e8b0b335f",
+        "android_client_info": {
+          "package_name": "com.example.note_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163476968718-mrtg2ua5j856jqfrkd2vgh28enbtlqtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALkxBNYswzcAFdOu9wE1kYmP-Hg3zByd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163476968718-mrtg2ua5j856jqfrkd2vgh28enbtlqtf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
